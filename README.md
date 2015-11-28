@@ -5,8 +5,7 @@ iOS, Apple Watch and OS X devices. It has been written for Java EE 7 compliant a
 
 ## Usage
 
-First, make sure that you have a Docker engine set up. Then clone this Github project, and install it in your
-local Maven directory:
+Clone this Github project, and install it in your local Maven directory:
 
 ```
 mvn install
@@ -23,8 +22,7 @@ Then, add this dependency to your project:
 </dependency>
 ```
 
-In order to send a push notification message to your app, inject the APNS resource in your Java EE component,
-and
+In order to send a push notification message to your app, inject the APNS resource in your Java EE component:
 
 ```
 @Resource(lookup = "java:/eis/apns-connector")
@@ -49,16 +47,12 @@ try (PushNotificationConnection conn = connectionFactory.getConnection()) {
 
 In addition, it is required to declare a message driven bean for processing feedback information from Apple:
 
+```
 @MessageDriven
 public class MessageDrivenBean implements ApnsListener {
-
-    private static final Logger LOG = Logger.getLogger(MessageDrivenBean.class.getName());
-
-    @Override
-    public void handleDeviceRemoval(Instant timestamp, byte[] deviceId) {
-        LOG.info("Device with id " + DatatypeConverter.printHexBinary(deviceId) + " has been removed at " + timestamp);
-    }
+    ...
 }
+```
 
 The feedback is about devices that failed to consume push notifications. The application should cease the
 notifications for those devices. The message driven bean should implement the handleDeviceRemoval method of
@@ -67,11 +61,17 @@ the ApnsListener interface:
 ```
 @Override
 public void handleDeviceRemoval(Instant timestamp, byte[] deviceId) {
-    /* Cease all notifications for the device identified by deviceId. */;
+    /* Remove notification subscriptions for the device identified by deviceId. */;
 }
 ```
 
 ## Configuration and Deployment
+
+After the Maven build, the resource adapter can be found here:
+
+```
+apns-connector-rar/target/apns-connector-rar-0.0-SNAPSHOT.rar
+```
 
 It depends on the Java EE server how this resource adapter needs to be deployed, configured, and how both
 application components (the notification sender and the feedback receiver) need to be bound to the adapter.
@@ -99,7 +99,8 @@ of their own).
 ## Sample application
 
 A sample application has been included in this project. It's a JSF application that runs inside a Wildfly 9
-application server. In order to run it, you first need to build the docker images:
+application server. In order to run it, you first need to build the docker images, in a shell that has
+a Docker engine configured:
 
 ```
 mvn install -Pdocker
