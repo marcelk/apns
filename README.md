@@ -117,3 +117,7 @@ The web application will be available at this URL:
 ```
 <docker_host>:8080/apns-connector-war-0.0-SNAPSHOT
 ```
+
+Then you can start sending push notifications to devices:
+
+![screenshot](/etc/sample_application_screenshot.png)
