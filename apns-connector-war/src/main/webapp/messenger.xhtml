@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<f:view>
+    <h:form>
+        <p>
+            <h:messages/>
+        </p>
+
+        <p>
+            <h:outputLabel for="deviceToken">Device Token</h:outputLabel>
+            <h:inputText id="deviceToken" value="#{messengerBackingBean.deviceToken}"/>
+        </p>
+
+        <p>
+            <h:outputLabel for="message">Message</h:outputLabel>
+            <h:inputText id="message" value="#{messengerBackingBean.message}"/>
+        </p>
+
+        <p>
+            <h:commandButton value="Send Push Message" action="#{messengerBackingBean.sendMessage}"/>
+        </p>
+    </h:form>
+</f:view>
+</html>
