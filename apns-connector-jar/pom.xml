@@ -4,9 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>nl.meandi</groupId>
+    <groupId>nl.meandi.apns-connector</groupId>
     <artifactId>apns-connector-jar</artifactId>
-    <version>0.0-SNAPSHOT</version>
+    <parent>
+        <groupId>nl.meandi.apns</groupId>
+        <artifactId>parent</artifactId>
+        <version>0.0-SNAPSHOT</version>
+        <relativePath>../parent/pom.xml</relativePath>
+    </parent>
 
     <build>
         <plugins>
