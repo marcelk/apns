@@ -34,7 +34,6 @@
         <dependency>
             <groupId>nl.meandi.apns.adapter</groupId>
             <artifactId>apns-adapter</artifactId>
-            <type>rar</type>
             <version>0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
