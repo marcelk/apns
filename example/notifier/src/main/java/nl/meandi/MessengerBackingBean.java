@@ -8,15 +8,14 @@ import javax.annotation.Resource;
 import javax.enterprise.inject.Model;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import javax.json.*;
+import javax.json.Json;
+import javax.json.JsonBuilderFactory;
+import javax.json.JsonObjectBuilder;
 import javax.validation.constraints.Pattern;
 import javax.xml.bind.DatatypeConverter;
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.time.Instant;
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalAmount;
 
 @Model
 public class MessengerBackingBean {

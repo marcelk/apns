@@ -15,9 +15,9 @@
     </scm>
 
     <modules>
-        <module>apns-connector-rar</module>
-        <module>apns-connector-jar</module>
-        <module>apns-connector-war</module>
+        <module>adapter</module>
+        <module>rar</module>
         <module>parent</module>
+        <module>example</module>
     </modules>
 </project>

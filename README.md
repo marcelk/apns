@@ -15,8 +15,8 @@ Then, add this dependency to your project:
 
 ```
 <dependency>
-    <groupId>nl.meandi</groupId>
-    <artifactId>apns-connector-jar</artifactId>
+    <groupId>nl.meandi.apns.adapter</groupId>
+    <artifactId>apns-adapter</artifactId>
     <version>0.0-SNAPSHOT</version>
     <scope>provided</scope>
 </dependency>
@@ -70,7 +70,7 @@ public void handleDeviceRemoval(Instant timestamp, byte[] deviceId) {
 After the Maven build, the resource adapter can be found here:
 
 ```
-apns-connector-rar/target/apns-connector-rar-0.0-SNAPSHOT.rar
+rar/target/apns-rar-0.0-SNAPSHOT.rar
 ```
 
 It depends on the Java EE server how this resource adapter needs to be deployed, configured, and how both
@@ -115,7 +115,7 @@ etc/start-example.sh <certificate_file_name> <certificate_file_password>
 The web application will be available at this URL:
 
 ```
-<docker_host>:8080/apns-connector-war-0.0-SNAPSHOT
+<docker_host>:8080/apns-notifier
 ```
 
 Then you can start sending push notifications to devices:

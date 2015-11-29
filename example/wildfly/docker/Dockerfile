@@ -1,10 +1,10 @@
 FROM jboss/wildfly:9.0.2.Final
 
-ADD apns-connector-rar-0.0-SNAPSHOT.rar /
+ADD apns-rar-*.rar /apns-rar.rar
 
 RUN /opt/jboss/wildfly/bin/jboss-cli.sh \
 'embed-server -c=standalone-full.xml',\
-'deploy /apns-connector-rar-0.0-SNAPSHOT.rar --name=apns-connector.rar',\
+'deploy /apns-rar.rar --name=apns-connector.rar',\
 '/subsystem=ee:write-attribute(name=spec-descriptor-property-replacement, value=true)',\
 '/subsystem=ee:write-attribute(name=annotation-property-replacement, value=true)',\
 '/subsystem=resource-adapters/resource-adapter=apns:add(archive=apns-connector.rar)',\

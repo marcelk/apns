@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>apns-connector</artifactId>
+        <groupId>nl.meandi.apns</groupId>
+        <version>0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>nl.meandi.apns.rar</groupId>
+    <artifactId>apns-rar</artifactId>
+    <version>0.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-rar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>rar-packaging</id>
+                        <goals>
+                            <goal>rar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>nl.meandi.apns.adapter</groupId>
+            <artifactId>apns-adapter</artifactId>
+            <type>rar</type>
+            <version>0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>
