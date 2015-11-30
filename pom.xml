@@ -3,19 +3,19 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>nl.meandi.apns</groupId>
     <artifactId>apns</artifactId>
-    <version>0.10-SNAPSHOT</version>
+    <version>0.10</version>
     <packaging>pom</packaging>
     <name>JCA Connector for the Apple Push Notification Service</name>
     <parent>
         <groupId>nl.meandi.apns.parent</groupId>
         <artifactId>apns-parent</artifactId>
-        <version>0.10-SNAPSHOT</version>
+        <version>0.10</version>
         <relativePath>parent/pom.xml</relativePath>
     </parent>
 
     <scm>
         <developerConnection>scm:git:https://github.com/marcelk/apns.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>apns-0.10</tag>
   </scm>
 
     <modules>
