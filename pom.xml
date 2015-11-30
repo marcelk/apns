@@ -6,6 +6,12 @@
     <version>0.10-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>JCA Connector for the Apple Push Notification Service</name>
+    <parent>
+        <groupId>nl.meandi.apns.parent</groupId>
+        <artifactId>apns-parent</artifactId>
+        <version>0.10-SNAPSHOT</version>
+        <relativePath>parent/pom.xml</relativePath>
+    </parent>
 
     <scm>
         <developerConnection>scm:git:https://github.com/marcelk/apns.git</developerConnection>
