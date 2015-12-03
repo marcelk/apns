@@ -9,6 +9,10 @@
     <description>JCA Connector for Apple Push Notification Service</description>
     <url>https://github.com/marcelk/apns</url>
 
+    <scm>
+        <url>https://github.com/marcelk/apns</url>
+    </scm>
+
     <build>
         <plugins>
             <plugin>
