@@ -4,6 +4,9 @@
     <groupId>nl.meandi.apns.examples.notifier</groupId>
     <artifactId>apns-example-notifier</artifactId>
     <packaging>war</packaging>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>JCA Connector for Apple Push Notification Service</description>
+    <url>https://github.com/marcelk/apns</url>
     <parent>
         <groupId>nl.meandi.apns.parent</groupId>
         <artifactId>apns-parent</artifactId>
