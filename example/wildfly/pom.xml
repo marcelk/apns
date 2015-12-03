@@ -9,7 +9,7 @@
     <parent>
         <groupId>nl.meandi.apns</groupId>
         <artifactId>apns-parent</artifactId>
-        <version>0.15</version>
+        <version>0.16-SNAPSHOT</version>
         <relativePath>../../parent/pom.xml</relativePath>
     </parent>
 
