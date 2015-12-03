@@ -13,13 +13,6 @@
         <relativePath>parent/pom.xml</relativePath>
     </parent>
 
-    <scm>
-        <connection>scm:git:https://github.com/marcelk/apns.git</connection>
-        <developerConnection>scm:git:https://github.com/marcelk/apns.git</developerConnection>
-        <url>https://github.com/marcelk/apns</url>
-      <tag>HEAD</tag>
-  </scm>
-
     <modules>
         <module>adapter</module>
         <module>rar</module>
