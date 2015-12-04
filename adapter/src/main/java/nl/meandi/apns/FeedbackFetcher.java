@@ -5,8 +5,10 @@ import javax.resource.spi.endpoint.MessageEndpoint;
 import javax.resource.spi.endpoint.MessageEndpointFactory;
 import java.io.IOException;
 import java.net.Socket;
-import java.util.*;
-import java.util.concurrent.ConcurrentSkipListSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.logging.Logger;
 
 class FeedbackFetcher extends TimerTask {
@@ -17,7 +19,7 @@ class FeedbackFetcher extends TimerTask {
 
     private final Timer timer;
 
-    private final Set<MessageEndpointFactory> endpointFactories = new ConcurrentSkipListSet<>();
+    private final List<MessageEndpointFactory> endpointFactories = new LinkedList<>();
 
     private ReadFeedbackWork readFeedbackWork;
 
@@ -87,7 +89,7 @@ class FeedbackFetcher extends TimerTask {
         LOG.info("Ready fetching feedback");
     }
 
-    public Set<MessageEndpointFactory> getEndpointFactories() {
+    public List<MessageEndpointFactory> getEndpointFactories() {
         return endpointFactories;
     }
 }
