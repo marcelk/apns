@@ -61,10 +61,10 @@ public void handleDeviceRemoval(Instant timestamp, byte[] deviceId) {
 
 ## Configuration and Deployment
 
-The resource adapter rar file can be found on Maven Central:
+The resource adapter rar file can be downloaded from Maven Central:
 
 ```
-http://search.maven.org/remotecontent?filepath=nl/meandi/apns/apns-rar/0.17/apns-rar-0.17.rar
+http://repo1.maven.org/maven2/nl/meandi/apns/apns-rar/0.18/apns-rar-0.18.rar
 ```
 
 It depends on the Java EE server how this resource adapter needs to be deployed, configured, and how both
