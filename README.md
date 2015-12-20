@@ -5,19 +5,13 @@ iOS, Apple Watch and OS X devices. It has been written for Java EE 7 compliant a
 
 ## Usage
 
-Clone this Github project, and install it in your local Maven directory:
-
-```
-mvn install
-```
-
-Then, add this dependency to your project:
+The adapter artifacts are available in Maven Central. Add this dependency to your project:
 
 ```
 <dependency>
     <groupId>nl.meandi.apns.adapter</groupId>
     <artifactId>apns-adapter</artifactId>
-    <version>0.0-SNAPSHOT</version>
+    <version>0.18</version>
     <scope>provided</scope>
 </dependency>
 ```
@@ -67,10 +61,10 @@ public void handleDeviceRemoval(Instant timestamp, byte[] deviceId) {
 
 ## Configuration and Deployment
 
-After the Maven build, the resource adapter can be found here:
+The resource adapter rar file can be found on Maven Central:
 
 ```
-rar/target/apns-rar-0.0-SNAPSHOT.rar
+http://search.maven.org/remotecontent?filepath=nl/meandi/apns/apns-rar/0.17/apns-rar-0.17.rar
 ```
 
 It depends on the Java EE server how this resource adapter needs to be deployed, configured, and how both
@@ -99,8 +93,8 @@ of their own).
 ## Sample application
 
 A sample application has been included in this project. It's a JSF application that runs inside a Wildfly 9
-application server. In order to run it, you first need to build the docker images, in a shell that has
-a Docker engine configured:
+application server. In order to run it, you first need to clone this project and build the docker images,
+in a shell that has a Docker engine configured:
 
 ```
 mvn install -Pdocker
