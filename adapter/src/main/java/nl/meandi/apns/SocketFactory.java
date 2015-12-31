@@ -12,7 +12,7 @@ class SocketFactory {
 
     private final static String COMMON_NAME_PREFIX_DEVELOPMENT = "Apple Development IOS Push Services";
 
-    private final static String COMMON_NAME_PREFIX_PRODUCTION = "Apple Production IOS Push Services";
+    private final static String COMMON_NAME_PREFIX_PRODUCTION = "Apple Push Services";
 
     public static SSLSocket createSocket(String hostPrefix, int port, String certificateFileName, String certificateFilePassword) {
         KeyStore keystore = loadKeystore(certificateFileName, certificateFilePassword);
