@@ -1,4 +1,4 @@
-# JCA 1.6 Connector for the Apple Push Notification Service
+# JCA Connector for the Apple Push Notification Service
 
 This adapter can be plugged into a Java EE application server, so that applications can send push messages to
 iOS, Apple Watch and OS X devices. It has been written for Java EE 7 compliant application servers running on Java 8.
